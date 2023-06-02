@@ -1,6 +1,6 @@
 # Terraform Challenge
 
-The challenge consists on building a Terraform Cloud Build module that is reusable and scalable, so that allows to perform multiple builds without editing the source code of the module. The module can only be called once from the `main.tf` file.
+The challenge consists of building a Terraform Cloud Build module that is reusable and scalable, so that allows to perform multiple builds without editing the source code of the module. The module can only be called once from the `main.tf` file.
 
 This challenge has been done by reusing the previous Terraform code developed for the Cloud Challenge - Contact List (2023).
 
@@ -22,7 +22,6 @@ Example of the `terraform.tfvars` to set all values needed:
 gcp_project = "project-id"
 
 builds = {
-
   "tf-trigger-Backend" = {
     location = "europe-west6"
     github = [{
@@ -44,7 +43,6 @@ builds = {
       repo_type = "GITHUB"
     }]
   },
-
   "tf-trigger-Frontend" = {
     location = "europe-west6"
     github = [{
@@ -65,7 +63,6 @@ builds = {
       revision  = "refs/heads/main"
       repo_type = "GITHUB"
     }]
-  }
-
+  },
 }
 ```
